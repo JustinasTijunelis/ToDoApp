@@ -1,0 +1,61 @@
+:root{
+    --dark:#3b1c49;
+    --darker:#1f2129;
+    --darkest:#121314;
+    --gray:#6B7280;
+    --light: #EEE;
+    --pink: #EC4899;
+    --purple:#8B5Cf6;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Poppins';font-size: 22px;
+    text-align: center;
+}
+
+body{
+    display: flex;
+    
+    flex-flow: column;
+    background-color: var(--purple);
+    margin-top: 200px;
+    background: var(--dark);
+    color: #EEE;
+    display: inline-flex;
+}
+
+form{
+    display:grid;
+    padding-top:80px ;
+    padding-bottom:80px ;
+    height: 270px;
+    width: 400px;
+    background-image: linear-gradient(to right,var(--pink),var(--purple));
+    border-radius: 24px;
+    margin: 10px;
+    justify-content: center;
+}
+
+/* Myktuko paspaudimas - aktivacija */
+#login, #registration {
+    flex: 1 1 0%;
+    cursor: pointer;
+    background-color: var(--darkest);
+    height: 50px;
+    width: 300px;
+    border-radius: 24px;
+    margin-right: 10px;
+    color: var(--gray);
+    justify-content: center;
+    transition: 0.4s;
+}
+
+#login:hover{
+    opacity: 0.8;
+}
+
+#registration:hover{
+    opacity: 0.8;
+}

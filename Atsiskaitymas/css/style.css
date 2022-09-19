@@ -1,0 +1,225 @@
+/* spalvu funkcijos */
+:root{
+    --dark:#3b1c49;
+    --darker:#1f2129;
+    --darkest:#121314;
+    --gray:#6B7280;
+    --light: #EEE;
+    --pink: #EC4899;
+    --purple:#8B5Cf6;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Poppins';font-size: 22px;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100px;
+    background: var(--dark);
+    color: #EEE;
+}
+
+header{
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 40px;
+    color: var(--gray);
+    margin-bottom: 10px;
+}
+
+#new-task-form {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+input,button{
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+#new-task-input{
+    flex: 1 1 0%;
+    background-color: var(--darker);
+    padding: 10px;
+    border-radius: 20px;
+    margin-right: 10px;
+    color: var(--light);
+}
+
+.user-menu{
+    flex: 1;
+    display: flex; 
+    flex-flow: row nowrap;
+    /* justify-content: space-between; */
+    flex: 1 1 0%;
+    background-image: linear-gradient(to right,var(--pink),var(--purple));
+    padding: 15px;
+    border-radius: 0px;
+    margin-right: 0px;
+    margin-top: 10px;
+    color: var(--light);
+    height: 20px;
+
+}
+
+.home{
+    margin: 0px;
+    flex: 1;
+    text-align: center;
+    align-self: flex-end;
+    height: 20px;
+    font-size: 10px;
+  
+}
+
+.home1{
+    margin: 0px;
+    flex: 1;
+    height: 40px;
+    font-size: 30px;
+}
+    
+#new-task-input::placeholder{
+    color: var(--gray);
+}
+
+#task-type{
+    color: var(--gray);
+}
+
+#task-type{
+    flex: 1 1 0%;
+    background-color: var(--darker);
+    padding: 5px;
+    border-radius: 20px;
+    margin-right: 520px;
+    color: var(--light);
+    font-size: 12px;
+    opacity: 0.5;
+}
+
+#task-date{
+    color: var(--light);
+    font-size: 20px;
+    margin-inline: 20px;
+    opacity: 0.6;
+}
+
+/* Mygtuko Add task text gradient */
+#new-task-submit {
+    color: var(--pink);
+    font-size: 20px;
+    font-weight: 700;
+    background-image: linear-gradient(to right,var(--pink),var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    cursor:pointer;
+    transition: 0.4s;
+}
+
+/* Myktuko paspaudimas - aktivacija */
+.material-symbols-outlined {
+    cursor: pointer;
+    font-size: 35px;
+    transition: 0.4s;
+}
+
+.material-symbols-outlined:hover {
+    opacity: 0.8;
+}
+
+#new-task-submit:hover {
+    opacity: 0.8;
+}
+
+#new-task-submit:active {
+    opacity: 0.6;
+}
+   
+main {
+    flex: 1 1 0%;
+    padding: 2rem 1rem;
+    max-width: 800px; 
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Tasku dizainas */
+.tasks {
+    padding:10px;
+}
+
+#tasks h2 {
+    font-size: 20px;
+    color: var(--gray);
+    margin-bottom: 20px;
+}
+
+#tasks .tasks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: var(--darkest);
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+#tasks .tasks .content .text{
+    display: flex;
+    color: var(--light);
+    min-height: 20px;
+    font-size: 20px;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+
+#tasks .tasks .content .text:not(:read-only){
+    color: var(--light);
+    opacity: 0.6;
+}
+
+#tasks .tasks .action {
+    display: flex;
+    align-self: flex-end; 
+    margin: 0 -5px;
+}
+
+.tasks .action button {
+    cursor: pointer;
+    margin: 0 5px;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+.tasks .action button:hover {
+    opacity: 0.8;
+}
+
+.tasks .action button:active {
+    opacity: 0.6;
+}
+
+.tasks .action .edit {
+    background-image: linear-gradient(to right,var(--pink),var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tasks .action .delete {
+    color: crimson;
+}
